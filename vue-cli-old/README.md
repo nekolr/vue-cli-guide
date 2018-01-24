@@ -27,4 +27,13 @@ vue-cli-old是使用旧版vue-cli生成的项目骨架，因为旧版和新版�
 └─static					        // 静态资源目录
 ```
 ## 详细解释
-### build/dev-server.js 本地服务器的配置
+### build/dev-server.js
+该模块主要是本地服务器的配置，主要完成下面的操作：
+- 检查Node.js和npm的版本
+- 引入相关插件和配置
+- 创建express服务器和webpack编译器
+- 配置`webpack-dev-middleware`开发中间件和`webpack-hot-middleware`热重载中间件
+- 加载代理服务和以上中间件
+- 配置静态资源文件目录，交由express服务器管理
+- 启动服务器，监听指定端口
+- 自动使用默认浏览器打开指定uri
