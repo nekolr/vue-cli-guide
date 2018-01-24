@@ -10,7 +10,7 @@ var config = require('../config')
 var merge = require('webpack-merge')
 // 引入webpack基本配置
 var baseWebpackConfig = require('./webpack.base.conf')
-
+// html文件生成插件
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 // 更加友好的输出webpack的错误、警告信息
 var FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')

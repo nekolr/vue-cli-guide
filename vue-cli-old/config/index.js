@@ -7,6 +7,7 @@ module.exports = {
     build: {
         // 生产环境
         env: require('./prod.env'),
+        // html文件生成的路径
         index: path.resolve(__dirname, '../dist/index.html'),
         // 编译好的文件存放目录
         assetsRoot: path.resolve(__dirname, '../dist'),
@@ -14,7 +15,7 @@ module.exports = {
         assetsSubDirectory: 'static',
         // 编译发布的根目录，可配置为资源服务器域名或者cdn域名
         assetsPublicPath: './',
-        // 生产环境是否生产sourceMap
+        // 生产环境是否产生sourceMap
         productionSourceMap: true,
         // 默认关闭Gzip，因为许多流行的静态主机，比如Surge或Netlify已经为您提供了所有的静态资源。
         // 在设置为true前，请npm install --save-dev compression-webpack-plugin
