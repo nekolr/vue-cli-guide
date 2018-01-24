@@ -15,7 +15,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 // 更加友好的输出webpack的错误、警告信息
 var FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 
-// 在浏览器不刷新的情况下，也可以看到改变的效果，如果刷新失败了，他就会自动刷新页面
+// 将 hot-reload 相对路径添加到 webpack.base.conf 的 对应 entry 前
 Object.keys(baseWebpackConfig.entry).forEach(function (name) {
   baseWebpackConfig.entry[name] = ['./build/dev-client'].concat(baseWebpackConfig.entry[name])
 })

@@ -56,7 +56,7 @@ var devMiddleware = require('webpack-dev-middleware')(compiler, {
   quiet: true
 })
 
-// 一个为webpack提供的热部署中间件
+// 一个为webpack提供的热加载中间件
 // see:<https://github.com/glenjamin/webpack-hot-middleware>
 var hotMiddleware = require('webpack-hot-middleware')(compiler, {
   log: () => {}
@@ -66,6 +66,7 @@ var hotMiddleware = require('webpack-hot-middleware')(compiler, {
 // see:<https://github.com/ampedandwired/html-webpack-plugin>
 compiler.plugin('compilation', function (compilation) {
   compilation.plugin('html-webpack-plugin-after-emit', function (data, cb) {
+    // 发布事件 reload，这个事件会被dev-client接收到，然后刷新
     hotMiddleware.publish({ action: 'reload' })
     cb()
   })
