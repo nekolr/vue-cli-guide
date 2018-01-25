@@ -5,6 +5,6 @@
 
 ## 项目划分
 
-- vue-cli-old
+- vue-cli-old   
 旧版本的vue-cli生成的项目骨架，之所以分开是因为新版本中去掉了`dev-server.js`和`dev-client.js`配置
 
